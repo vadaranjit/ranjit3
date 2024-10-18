@@ -13,7 +13,7 @@ public class MyExecutionEventListener implements EventListenerInitializer {
         listener.on(Event.class, event -> {
             if (ExecutionEvent.TEST_SUITE_FINISHED_EVENT.equals(event.getTopic())) {
                 ExecutionEvent eventObject = (ExecutionEvent) event.getProperty("org.eclipse.e4.data");
-
+ 
                 TestSuiteExecutionContext testSuiteContext = (TestSuiteExecutionContext) eventObject
                         .getExecutionContext();
 
